@@ -71,10 +71,10 @@ public class ProductResource {
   @RequestMapping(value = "/produtos/", 
   method = RequestMethod.POST)
   public Product criarProduto(@RequestBody Product product) {
-    String raca = product.getRaca();
+    String tinta = product.getTinta();
     double valor = product.getValor();
     int quantidade = product.getQuantidade();
-    return this.repository.save(new Product(raca, valor, quantidade));
+    return this.repository.save(new Product(tinta, valor, quantidade));
     // return new Product(raca, valor, quantidade);
   }
 
@@ -86,7 +86,7 @@ public class ProductResource {
       Product produto = this.repository.findById(id).get();
       produto.setQuantidade(produtoParam.getQuantidade());
       produto.setValor(produtoParam.getValor());
-      produto.setRaca(produtoParam.getRaca());
+      produto.setTinta(produtoParam.getTinta());
   }
 
 }

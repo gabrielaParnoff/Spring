@@ -10,28 +10,29 @@ public class Product {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
-    private String raca;
+    private String tinta;
+    private String cores;
     private double valor;
     private int quantidade;
     protected Product() {}
-    public Product(String raca, 
+    public Product(String tinta, 
     double valor, int quantidade) {
-        this.raca = raca;
+        this.tinta = tinta;
         this.valor = valor;
         this.quantidade = quantidade;
     }
 
     /**
-     * @return the raca
+     * @return the tinta
      */
-    public String getRaca() {
-        return this.raca;
+    public String getTinta() {
+        return this.tinta;
     }
     /**
-     * @param raca the raca to set
+     * @param tinta the tinta to set
      */
-    public void setRaca(String raca) {
-        this.raca = raca;
+    public void setTinta(String tinta) {
+        this.tinta = tinta;
     }
 
     public double getValor() {
@@ -46,4 +47,26 @@ public class Product {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
+	public Object getProduct() {
+		return null;
+    }
+    /**
+     * @return the cores
+     */
+    public String getCores() {
+        return cores;
+    }
+    /**
+     * @param cores the cores to set
+     */
+    public void setCores(String cores) {
+        this.cores = cores;
+    }
+	public Object getCustomer() {
+		return null;
+	}
+	public Long getId() {
+		return null;
+	}
+
 }
