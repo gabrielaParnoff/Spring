@@ -74,7 +74,8 @@ public class ProductResource {
     String tinta = product.getTinta();
     double valor = product.getValor();
     int quantidade = product.getQuantidade();
-    return this.repository.save(new Product(tinta, valor, quantidade));
+    String cores = product.getCores();
+    return this.repository.save(new Product(tinta, valor, quantidade, cores));
     // return new Product(raca, valor, quantidade);
   }
 
@@ -87,6 +88,7 @@ public class ProductResource {
       produto.setQuantidade(produtoParam.getQuantidade());
       produto.setValor(produtoParam.getValor());
       produto.setTinta(produtoParam.getTinta());
+      produto.setCores(produtoParam.getCores());
   }
 
 }

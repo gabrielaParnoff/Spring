@@ -16,10 +16,11 @@ public class Product {
     private int quantidade;
     protected Product() {}
     public Product(String tinta, 
-    double valor, int quantidade) {
+    double valor, int quantidade, String cores) {
         this.tinta = tinta;
         this.valor = valor;
         this.quantidade = quantidade;
+        this.cores = cores;
     }
 
     /**
@@ -47,9 +48,6 @@ public class Product {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-	public Object getProduct() {
-		return null;
-    }
     /**
      * @return the cores
      */
@@ -62,11 +60,8 @@ public class Product {
     public void setCores(String cores) {
         this.cores = cores;
     }
-	public Object getCustomer() {
-		return null;
-	}
 	public Long getId() {
-		return null;
+		return id;
 	}
 
 }

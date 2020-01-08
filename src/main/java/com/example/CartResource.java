@@ -25,7 +25,7 @@ public class CartResource {
   public CartResource() {}
 
  
-  @RequestMapping(value = "/Compras/{id}", method = RequestMethod.DELETE)
+  @RequestMapping(value = "/compras/{id}", method = RequestMethod.DELETE)
   public void removerCart(@PathVariable Long id) {
     this.repository.deleteById(id);
   }
